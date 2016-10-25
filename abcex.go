@@ -41,11 +41,12 @@ func encode(number int64) string{
 }
 
 func decode(str string) int64 {
-    result := 0
+    var result int64
+	result = 0
     str = reverse(str)
 
     for i, c := range str {
-        result = math.Pow(36, i) * abcexToDec[c] + result
+        result = int64(math.Pow(36, float64(i))) * int64(abcexToDec[string(c)]) + result
     }
 
     return result
