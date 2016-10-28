@@ -29,7 +29,7 @@ func flipMap() map[string]int {
     return flipped
 }
 
-func encode(number int64) string{
+func Encode(number int64) string{
     result := ""
 
     for number > 0 {
@@ -40,7 +40,7 @@ func encode(number int64) string{
     return result
 }
 
-func decode(str string) int64 {
+func Decode(str string) int64 {
     var result int64
 	result = 0
     str = reverse(str)
